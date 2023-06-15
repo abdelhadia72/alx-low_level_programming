@@ -1,19 +1,16 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-    int number = 4;
-    long size = 34;
-    char lan = 'C';
-    float mark = 3.3;
-    long long big = 123;
-
-    printf("Size of a char: %li byte(s)\n", sizeof(lan));
-    printf("Size of a int: %li byte(s)\n", sizeof(number));
-    printf("Size of a long: %li byte(s)\n", sizeof(size));
-    printf("Size of a long long: %li byte(s)\n", sizeof(big));
-    printf("Size of a float: %li byte(s)\n", sizeof(mark));
-    return 0;
-
+	printf("Size of a char: %lu byte(s)\n", sizeof(char));
+	printf("Size of an int: %lu byte(s)\n", sizeof(int));
+	printf("Size of a long: %lu byte(s)\n", sizeof(long));
+	printf("Size of a long long: %lu byte(s)\n", sizeof(long long));
+	printf("Size of a float: %lu byte(s)\n", sizeof(float));
+	return (0);
 }
-
