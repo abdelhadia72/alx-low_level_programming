@@ -3,23 +3,17 @@
  * main - Entry point
  * Return: 0 (No Error)
  */
+
 int main(void)
 {
-char c = 97;
-while (c <= 122)
+for (int i = 0; i < 10; i++)
 {
-putchar(c);
-c++;
-}
-
-c = 65;
-
-while (c <= 90)
+putchar('0' + i);
+if (i < 9)
 {
-putchar(c);
-c++;
+putchar(44);
 }
-
-putchar('\n');
+putchar(' ');
+}
 return (0);
 }

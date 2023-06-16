@@ -5,21 +5,10 @@
  */
 int main(void)
 {
-char c = 97;
-while (c <= 122)
+
+for (int i = 0; i < 10; i++)
 {
-putchar(c);
-c++;
+printf("%d", i);
 }
-
-c = 65;
-
-while (c <= 90)
-{
-putchar(c);
-c++;
-}
-
-putchar('\n');
 return (0);
 }

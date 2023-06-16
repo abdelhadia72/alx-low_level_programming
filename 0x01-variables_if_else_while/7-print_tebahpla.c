@@ -1,21 +1,18 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
- * Return: 0 (Success)
+ * Return: 0 (No Error)
  */
 int main(void)
 {
-char c = 'a';
+char c = 122;
 
-while (c <= 'z')
+while (c >= 97)
 {
 putchar(c);
-c++;
+c--;
 }
 
 putchar('\n');
-
 return (0);
 }
-
