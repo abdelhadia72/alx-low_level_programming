@@ -6,19 +6,19 @@
 int main(void)
 {
 int i, j, k;
-for (i = 0; i < 10; i++)
+for (i = 0; i < 8; i++)
 {
-for (j = 0 ; j < 10; j++)
+for (j = i ; j < 9; j++)
 {
-for(k = 1 ; k < 10; k++){
-    putchar('0' + i);
-    putchar('0' + j);
-    putchar('0' + k);
-    putchar(44);
-    putchar(' ');
-if(i == 7 && j ==8 && k==9)
+for (k = j + 1 ; k < 10; k++)
 {
-return 0;
+putchar('0' + i);
+putchar('0' + j);
+putchar('0' + k);
+if (i != 7 || j != 8 || k != 9)
+{
+putchar(44);
+putchar(' ');
 }
 }
 }
