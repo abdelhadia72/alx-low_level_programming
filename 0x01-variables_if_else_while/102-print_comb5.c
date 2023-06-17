@@ -13,9 +13,6 @@ int main(void)
 	{
 		for (j = i + 1; j < 100; j++)
 		{
-			if (j != 0)
-				putchar(' ');
-
 			putchar((i / 10) + '0');
 			putchar((i % 10) + '0');
 			putchar(' ');
@@ -31,4 +28,3 @@ int main(void)
 
 	return (0);
 }
-
