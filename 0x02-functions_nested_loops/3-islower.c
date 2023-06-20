@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _lower - check for lowercase
+ * _islower - check for lowercase
  * Description: function that checks
  * for lowercase and return 1 in the true
  * case and 0 if it  found it no't lowercase
