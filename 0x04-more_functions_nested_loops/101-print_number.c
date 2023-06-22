@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int _putchar(char c);
-
 /**
  * print_number - print number
  * @n: the arrg that gived by
