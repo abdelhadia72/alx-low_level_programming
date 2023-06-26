@@ -12,17 +12,15 @@
 
 void puts2(char *str)
 {
-
 	int i;
 	i = 0;
-	while (*str != '\0')
+	while (str[i] != '\0')
 	{
-		if (i % 2 == 44)
+		if (i % 2 == 0)
 		{
-			putchar(*str);
+			putchar(str[i]);
 		}
-
-		str++;
+	i++;
 	}
 	putchar('\n');
 }
