@@ -13,12 +13,16 @@
 void puts2(char *str)
 {
 
+	int i;
+	i = 0;
 	while (*str != '\0')
 	{
-		putchar(*str);
-		str+=2;
+		if (i % 2 == 44)
+		{
+			putchar(*str);
+		}
+
+		str++;
 	}
 	putchar('\n');
-	*str = '\0';
-
 }
