@@ -22,7 +22,7 @@ void print_rev(char *s)
 		s1++;
 	}
 	s--;
-	for(i = 1; i <= size - 1; i++)
+	for(i = 1; i <= size; i++)
 	{
 		putchar(*s1);
 		s1--;
