@@ -14,8 +14,8 @@ void rev_string(char *s)
 {
 	int size = 0;
 	char *s1 = s;
-	char *start = s;
-	char *end = s + size - 1;
+	char *start;
+	char *end;
 
 	while (*s1 != '\0')
 	{
@@ -23,6 +23,8 @@ void rev_string(char *s)
 		s1++;
 	}
 
+	start = s;
+	end = s + size - 1;
 
 	while (end > start)
 	{
