@@ -1,7 +1,18 @@
 #include <stdio.h>
 
+/**
+ * print_rev - funtion reverse text
+ * Description: This funtion that
+ * reverse a text
+ * @s: The arrg that giving by the user
+ * Return: void
+ *
+ */
+
+
 void print_rev(char *s)
 {
+	int i;
 	int size = 0;
 	char *s1 = s;
 
@@ -12,7 +23,7 @@ void print_rev(char *s)
 	}
 
 
-	for(int i = 0; i <= size; i++)
+	for(i = 0; i <= size; i++)
 	{
 		putchar(*s1);
 		s1--;
