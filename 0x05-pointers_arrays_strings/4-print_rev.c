@@ -21,7 +21,7 @@ void print_rev(char *s)
 		size++;
 		s1++;
 	}
-	s--;
+
 	for (i = 0; i <= size - 1; i++)
 	{
 		s1--;
