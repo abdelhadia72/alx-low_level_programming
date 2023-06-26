@@ -21,11 +21,11 @@ void print_rev(char *s)
 		size++;
 		s1++;
 	}
-
-
+	s--;
 	for(i = 0; i <= size; i++)
 	{
 		putchar(*s1);
 		s1--;
 	}
+	putchar('\n');
 }
