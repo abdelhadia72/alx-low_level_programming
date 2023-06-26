@@ -1,5 +1,5 @@
 #include "main.h"
 
-void swap_int(int *a, int *b)
+void puts_half(char *str)
 {
 }
