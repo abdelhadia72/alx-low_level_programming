@@ -7,7 +7,7 @@
  * it's copy a string from the @src
  * @src: the string giving by the user
  * @dest: the arrg that we copy to .
- * Return: dest
+print_rev  * Return: dest
  *
  */
 
