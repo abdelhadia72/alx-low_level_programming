@@ -33,18 +33,3 @@ void puts_half(char *str)
 	}
 	putchar('\n');
 }
-
-
-
-
-int main(void)
-{
-    char *str;
-    char *str2;
-
-    str2 = "wowlolfine";
-    str = "0123456789";
-    puts_half(str);
-    puts_half(str2);
-    return (0);
-}

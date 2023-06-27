@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_rev - function that convert
+ * _atoi- function that convert
  * Description: This funtion that
  * function that convert a string to an integer
  * @s: The arrg that giving by the user
@@ -32,5 +32,5 @@ int _atoi(char *s)
 		break;
 	}
 	res = sig * res;
-	return res;
+	return (res);
 }
