@@ -10,18 +10,19 @@
  * Return: dest copyed string
  */
 
-
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+		int i;
 
-	for (i = 0; i < n; i++)
-	{
-		if (*src != '\0')
-			*(dest++) = *(src++);
-		else
-			*(dest++) = '\0';
-	}
+			for (i = 0; i < n && *src != '\0'; i++)
+			{
+				*(dest++) = *(src++);
+			}
+			while (i < n)
+			{
+				*(dest++) = '\0';
+				i++;
+			}
 
-	return (dest);
+		return (dest);
 }
