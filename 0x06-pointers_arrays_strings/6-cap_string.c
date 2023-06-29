@@ -4,29 +4,32 @@
  * cap_string - function that capitalizes
  * Description: This function capitalizes the first letter of each word
  * in the string
- * @value: the string to be capitalized
+ * @s: the string to be capitalized
  * Return: the capitalized string
  */
-
-char *cap_string(char *value)
+char *cap_string(char *s)
 {
-	char separators[] = " \t\n,;.!?\"(){}";
 	int i, j;
 
-	for (i = 0; value[i] != '\0'; i++)
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0 || value[i - 1] == ' ')
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+
+		for (j = 0; j < 13; j++)
 		{
-			for (j = 0; separators[j] != '\0'; j++)
+			if (s[i] == spe[j])
 			{
-				if (value[i] == separators[j])
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
 				{
-					if (value[i + 1] >= 'a' && value[i + 1] <= 'z')
-						value[i + 1] -= 32;
-					break;
+					s[i + 1] -= 32;
 				}
 			}
 		}
 	}
-	return (value);
+
+	return (s);
 }
