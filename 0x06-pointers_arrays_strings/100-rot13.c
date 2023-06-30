@@ -3,7 +3,7 @@
 * rot13 - rot13 encryption algorithm
 * Description:  function that encodes a string using rot13.
 * @str: string to be encrypted
-* Return: rot13 encoded 
+* Return: rot13 encoded
 */
 
 char *rot13(char *str)
