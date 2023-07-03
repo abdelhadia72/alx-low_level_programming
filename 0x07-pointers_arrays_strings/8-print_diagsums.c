@@ -11,13 +11,12 @@ void print_diagsums(int *a, int size)
 {
 	int n1 = 0;
 	int n2 = 0;
-
-	for (int i = 0; i < size; i++)
+  int i;
+	for (i = 0; i < size; i++)
 	{
 		n1 += *(a + (size * i + i));
 		n2 += *(a + (size * i + size - 1 - i));
 	}
 
-	printf("%d, ", n2);
-	printf("%d\n", n2);
+	printf("%d, %d",n1, n2);
 }
