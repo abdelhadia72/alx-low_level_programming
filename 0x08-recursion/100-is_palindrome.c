@@ -1,4 +1,4 @@
-#iclude "main.h"
+#include "main.h"
 int get_size(char *s);
 int check_palindrome(char *start, char *end);
 
