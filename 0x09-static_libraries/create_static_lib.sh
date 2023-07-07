@@ -1,3 +1,3 @@
 #bin/bash
-gcc -c *.c
-ar rcs libmy.a *.o
+gcc -Werror -c *.c
+ar rc libmy.a *.o
