@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 
 	} else
 	{
-		printf("0\n");
+		printf("0);
 	}
 
 	for (j = 1; j < argc; j++)
