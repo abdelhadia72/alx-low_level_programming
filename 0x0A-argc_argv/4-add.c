@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - Entry point of the program
@@ -14,27 +15,17 @@ int main(int argc, char **argv)
 {
 	int i, res = 0;
 
-	if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		if (strspn(argv[i], "0123456789") != strlen(argv[i]))
 		{
-			if (!isdigit(*argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			res += atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
-	}
-	else
-	{
-		printf("0\n");
+
+	res += atoi(argv[i]);
 	}
 
-	if (res)
-	{
-		printf("%d\n", res);
-	}
-
+	printf("%d\n", res);
 	return (0);
 }
