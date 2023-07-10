@@ -9,6 +9,7 @@
  * @s2: The second string
  * Return: A pointer to the concatenated string, or NULL on failure
  */
+ 
 char *str_concat(char *s1, char *s2)
 {
 	int length;
@@ -19,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 	newstring = (char *)malloc(length * sizeof(char));
 	if (newstring == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	for (i = 0; i < length; i++)
@@ -36,8 +37,8 @@ char *str_concat(char *s1, char *s2)
 
 	if (newstring == NULL)
 	{
-		return "";
+		return ("");
 	}
 
-	return newstring;
-
+	return (newstring);
+}
