@@ -13,13 +13,13 @@ char *str_concat(char *s1, char *s2)
 {
 	int length;
 	int i;
+	char *newstring;
 
 	length = strlen(s1) + strlen(s2) + 1;
-	char *newstring = (char *)malloc(length * sizeof(char));
-
+	newstring = (char *)malloc(length * sizeof(char));
 	if (newstring == NULL)
 	{
-		return (NULL);
+		return NULL;
 	}
 
 	for (i = 0; i < length; i++)
@@ -36,8 +36,8 @@ char *str_concat(char *s1, char *s2)
 
 	if (newstring == NULL)
 	{
-		return ("");
+		return "";
 	}
 
-	return (newstring);
-}
+	return newstring;
+
