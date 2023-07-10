@@ -6,7 +6,6 @@
  * alloc_grid - Allocates a 2-dimensional grid of integers
  * @width: The width of the grid
  * @height: The height of the grid
- *
  * Return: A pointer to the allocated grid, or NULL on failure
  */
 int **alloc_grid(int width, int height)
