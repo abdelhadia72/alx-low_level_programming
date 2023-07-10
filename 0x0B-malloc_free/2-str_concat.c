@@ -12,6 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	int length;
+	int i;
 
 	length = strlen(s1) + strlen(s2) + 1;
 	char *newstring;
@@ -23,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	for (int i = 0; i < length; i++)
+	for (i = 0; i < length; i++)
 	{
 		if (i < strlen(s1))
 		{
