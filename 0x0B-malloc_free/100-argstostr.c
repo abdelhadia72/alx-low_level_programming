@@ -17,24 +17,24 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		size += strlen(av[i]) + 1;
-	}
+			size += strlen(av[i]) + 1;
+		}
 
 	str = (char *)malloc((size));
 
 	if (!str)
 	{
-		return (NULL);
-	}
+			return (NULL);
+		}
 
 	for (j = 0; j < ac; j++)
 	{
-		for (k = 0; av[j][k]; k++, tracker++)
-		{
-			str[tracker] = av[j][k];
+			for (k = 0; av[j][k]; k++, tracker++)
+			{
+						str[tracker] = av[j][k];
+					}
+			str[tracker++] = '\n';
 		}
-		str[tracker++] = '\n';
-	}
 	str[tracker] = '\0';
 
 	return (str);
