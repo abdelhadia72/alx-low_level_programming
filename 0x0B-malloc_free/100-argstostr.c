@@ -15,6 +15,7 @@ char *argstostr(int ac, char **av)
 	int i, j, k, size, tracker;
 	char *str;
 	tracker = 0;
+	size = 0;
 
 	if(!ac || !av)
 		return (NULL);
