@@ -14,6 +14,7 @@ char *argstostr(int ac, char **av)
 {
 	int i, j, k, size, tracker;
 	char *str;
+	tracker = 0;
 
 	if(!ac || !av)
 		return (NULL);
@@ -21,21 +22,21 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 			size += strlen(av[i]) + 1;
-		}
+	}
 
-	str = (char *)malloc((size));
+	str = (char *)malloc(size * sizeof(char));
 
 	if (!str)
 	{
 			return (NULL);
-		}
+	}
 
 	for (j = 0; j < ac; j++)
 	{
 			for (k = 0; av[j][k]; k++, tracker++)
 			{
 						str[tracker] = av[j][k];
-					}
+			}
 			str[tracker++] = '\n';
 		}
 	str[tracker] = '\0';
