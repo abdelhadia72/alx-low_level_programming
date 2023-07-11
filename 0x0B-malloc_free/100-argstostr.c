@@ -14,6 +14,9 @@ char *argstostr(int ac, char **av)
     int i, j, k, size = 0, tracker = 0;
     char *str;
 
+	if(!ac || !av)
+		return NULL;
+
     for (i = 0; i < ac; i++)
     {
             size += strlen(av[i]) + 1;
