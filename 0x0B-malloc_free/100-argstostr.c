@@ -12,11 +12,10 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j, k, size, tracker;
+	char *str;
 
 	size = 0;
 	tracker = 0;
-
-	char *str;
 
 	if (!ac || !av)
 		return (NULL);
