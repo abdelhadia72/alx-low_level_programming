@@ -9,38 +9,32 @@
  *
  * Return: string of arguments with newline characters
  */
-
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, size, tracker;
-	char *str;
-	tracker = 0;
-	size = 0;
+    int i, j, k, size = 0, tracker = 0;
+    char *str;
 
-	if(!ac || !av)
-		return (NULL);
+    for (i = 0; i < ac; i++)
+    {
+            size += strlen(av[i]) + 1;
+        }
 
-	for (i = 0; i < ac; i++)
-	{
-			size += strlen(av[i]) + 1;
-	}
+    str = (char *)malloc(size + 1);
 
-	str = (char *)malloc(size * sizeof(char));
+    if (!str)
+    {
+            return (NULL);
+        }
 
-	if (!str)
-	{
-			return (NULL);
-	}
+    for (j = 0; j < ac; j++)
+    {
+            for (k = 0; av[j][k]; k++, tracker++)
+            {
+	                str[tracker] = av[j][k];
+	            }
+            str[tracker++] = '\n';
+        }
+    str[tracker] = '\0';
 
-	for (j = 0; j <= ac; j++)
-	{
-			for (k = 0; av[j][k]; k++, tracker++)
-			{
-						str[tracker] = av[j][k];
-			}
-			str[tracker++] = '\n';
-		}
-	str[tracker] = '\0';
-
-	return (str);
+    return (str);
 }
