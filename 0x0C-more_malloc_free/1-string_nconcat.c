@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 
 /**
  * string_nconcat - Concatenates two strings up to n bytes
@@ -12,7 +13,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i;
+	unsigned long int i;
 	char *str;
 	unsigned long int len = n + strlen(s1);
 
