@@ -28,15 +28,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
     if (str == NULL)
         return (NULL);
 
-    for (i = 0; i < len - 1; i++)
+    for (i = 0; i < len; i++)
     {
-        if (i <= strlen(s1))
+        if (i < strlen(s1))
             str[i] = s1[i];
-        else
+        else if (i - strlen(s1) < n)
             str[i] = s2[i - strlen(s1)];
+	else
+		break;
     }
 
-    str[len] = '\0';
+    str[i] = '\0';
 
     return (str);
 }
