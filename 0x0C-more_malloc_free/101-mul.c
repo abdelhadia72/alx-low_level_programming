@@ -12,6 +12,8 @@
 
 void multiply(char *num1, char *num2)
 {
+
+	int i, j, k;
 	int len1 = strlen(num1);
 	int len2 = strlen(num2);
 
@@ -23,9 +25,9 @@ void multiply(char *num1, char *num2)
 		exit(98);
 	}
 
-	for (int i = len1 - 1; i >= 0; i--)
+	for (i = len1 - 1; i >= 0; i--)
 	{
-		for (int j = len2 - 1; j >= 0; j--)
+		for (j = len2 - 1; j >= 0; j--)
 		{
 			int digit1 = num1[i] - '0';
 			int digit2 = num2[j] - '0';
@@ -37,17 +39,17 @@ void multiply(char *num1, char *num2)
 		}
 	}
 
-	int i = 0;
+	k = 0;
 
-	while (result[i] == 0 && i < len1 + len2 - 1)
+	while (result[k] == 0 && k < len1 + len2 - 1)
 	{
-		i++;
+		k++;
 	}
 
-	while (i < len1 + len2)
+	while (k < len1 + len2)
 	{
-		putchar(result[i] + '0');
-		i++;
+		putchar(result[k] + '0');
+		k++;
 	}
 	putchar('\n');
 
@@ -63,14 +65,18 @@ void multiply(char *num1, char *num2)
 
 int main(int argc, char *argv[])
 {
+
+	char *num1, *num2;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
 		exit (98);
 	}
 
-	char *num1 = argv[1];
-	char *num2 = argv[2];
+	num1 = argv[1];
+	num2 = argv[2];
+
 
 	multiply(num1, num2);
 
