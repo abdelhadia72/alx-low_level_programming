@@ -2,10 +2,10 @@
 #include "dog.h"
 
 /**
- * * print_dog - Prints the details of a dog structure
- * * @d: Pointer to the dog structure
- * * Description: This function prints the name, age, and owner of a dog.
- * */
+ * print_dog - Prints the details of a dog structure
+ * @d: Pointer to the dog structure
+ * Description: This function prints the name, age, and owner of a dog.
+ */
 
 void print_dog(struct dog *d)
 {
