@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "dog.h"
 
 /**
@@ -15,8 +13,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d)
 	{
-		strcpy(d->name, name);
-		strcpy(d->owner, owner);
+		d->name = name;
+		d->owner = owner;
 		d->age = age;
 	}
 }
