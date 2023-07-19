@@ -7,6 +7,6 @@
 void print_name(char *name, void (*f)(char *))
 {
 	if(!name)
-		return (NULL);
+		return (0);
 	(*f)(name);
 }
