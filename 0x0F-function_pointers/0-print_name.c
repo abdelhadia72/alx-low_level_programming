@@ -6,7 +6,8 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if(!name)
-		return (0);
-	(*f)(name);
+	if(name)
+	{
+		(*f)(name);
+	}
 }
