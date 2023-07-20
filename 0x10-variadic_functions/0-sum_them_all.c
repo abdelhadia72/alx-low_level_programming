@@ -1,5 +1,5 @@
 #include <stdarg.h>
-
+#include <stdio.h>
 /**
  * sum_them_all - Sums a variable number of integers.
  * @n: The number of integers to sum.
