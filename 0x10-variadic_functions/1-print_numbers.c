@@ -11,8 +11,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 
 	va_list list;
-	unsigned int i, value;
-	
+	unsigned int i;
+	int value;
+
 	va_start(list, n);
 
 	for (i = 0; i < n; i++)
