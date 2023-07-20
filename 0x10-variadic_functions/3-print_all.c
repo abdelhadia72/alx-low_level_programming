@@ -57,13 +57,9 @@ void print_float(va_list value)
 
 void print_all(const char * const format, ...)
 {
-	int i, j;
-
-	i = 0;
-
-	va_list list;
+	int i;
 	char *separator = "";
-
+	va_list list;
 	print_me print_value[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -73,6 +69,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(list, format);
+	i = 0;
 	while (format && format[i])
 	{
 		int j = 0;
