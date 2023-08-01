@@ -10,8 +10,8 @@
 int pop_listint(listint_t **head)
 {
 	int value;
-	listint_t *tmp;
 
+	listint_t *tmp;
 
 	tmp = (*head);
 	value = (*head)->n;
