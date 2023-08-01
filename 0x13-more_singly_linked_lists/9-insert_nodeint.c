@@ -7,9 +7,9 @@
  * @head: Pointer to a pointer to the head of the list.
  * @idx: Index at which the new node should be inserted.
  * @n: The data value to be stored in the new node.
+ *
  * Return: Address of the new node, or NULL if the operation fails.
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *current, *new_node;
@@ -49,5 +49,3 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	return (new_node);
 }
-
-
