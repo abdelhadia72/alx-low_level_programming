@@ -15,6 +15,11 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[i])
 	{
+		if (b[i] != '0' && b[i] != '1')
+		{
+			value = 0;
+			break;
+		}
 		value = (value << 1) + (b[i] - 48);
 		i++;
 	}
