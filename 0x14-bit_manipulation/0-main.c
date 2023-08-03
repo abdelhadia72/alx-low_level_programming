@@ -1,19 +1,24 @@
+#include <stdio.h>
 #include "main.h"
 
-int main()
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-    // Test cases
-    unsigned long int test_cases[] = {
-        0, 1, 42, 255, 1000, 9876543210
-    };
-    int num_test_cases = sizeof(test_cases) / sizeof(test_cases[0]);
+    unsigned int n;
 
-    for (int i = 0; i < num_test_cases; i++) {
-        printf("Binary representation of %lu: ", test_cases[i]);
-        print_binary(test_cases[i]);
-        putchar('\n');
-    }
-
-    return 0;
+    n = binary_to_uint("1");
+    printf("%u\n", n);
+    n = binary_to_uint("101");
+    printf("%u\n", n);
+    n = binary_to_uint("1e01");
+    printf("%u\n", n);
+    n = binary_to_uint("1100010");
+    printf("%u\n", n);
+    n = binary_to_uint("0000000000000000000110010010");
+    printf("%u\n", n);
+    return (0);
 }
-
