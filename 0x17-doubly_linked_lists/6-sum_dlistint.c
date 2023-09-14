@@ -6,7 +6,7 @@
  * @head: Pointer to the head of the list
  *
  * Return: Sum of all integer values in the list,
- * or -1 if the list is empty
+ * or 0 if the list is empty
  */
 
 int sum_dlistint(dlistint_t *head)
@@ -16,7 +16,7 @@ int sum_dlistint(dlistint_t *head)
 	int sum = 0;
 
 	if (!head)
-		return (-1);
+		return (0);
 
 	while (current)
 	{
