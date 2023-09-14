@@ -6,18 +6,23 @@
  * @head: Pointer to the head of the list
  *
  * Return: Sum of all integer values in the list,
- * or 0 if the list is empty
+ * or -1 if the list is empty
  */
 
-dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+int sum_dlistint(dlistint_t *head)
 {
-	int i = 0;
+	dlistint_t *current = head;
 
-	while (head)
+	int sum = 0;
+
+	if (!head)
+		return (-1);
+
+	while (current)
 	{
-		if (i == index)
-			return (head);
+		sum += current->n;
+		current = current->next;
 	}
 
-	return (NULL);
+	return (sum);
 }
