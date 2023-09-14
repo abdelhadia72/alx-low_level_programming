@@ -9,20 +9,16 @@
  * or 0 if the list is empty
  */
 
-int sum_dlistint(dlistint_t *head)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *current = head;
+	int i = 0;
 
-	int sum = 0;
-
-	if (!head)
-		return (0);
-
-	while (current)
+	while (head)
 	{
-		sum += current->n;
-		current = current->next;
+		if (i == index)
+			return (current);
 	}
 
-	return (sum);
+	return (NULL);
 }
