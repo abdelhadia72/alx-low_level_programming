@@ -1,4 +1,4 @@
-#!/usr/bin/bash
-gcc *.c -c -fpic
-gcc *.o -shared -o liball.so
+#!/usr/bin/env bash
+gcc -Wall -Werror -Wextra -pedantic *.c -c -fpic
+gcc -Wall -Werror -Wextra -pedantic *.o -shared -o liball.so
 rm *.o
