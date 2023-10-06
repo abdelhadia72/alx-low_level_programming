@@ -33,11 +33,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	/* fill all nodes with null to know the end*/
-	while (i < size)
+	for (i = 0; i < size; i++)
 	{
 		new_table->array[i] = NULL;
-		i++;
 	}
+
 	/* return the new table */
 	return (new_table);
 }
