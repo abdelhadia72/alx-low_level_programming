@@ -15,12 +15,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (!size)
 		return (NULL);
 
-	/* create a hash table */
 	ht = malloc(sizeof(hash_table_t));
 	if (!ht)
 		return (NULL);
 
-	/* create the array now */
 	ht->size = size;
 	ht->array = malloc(sizeof(hash_node_t *) * size);
 
@@ -30,12 +28,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
-	/* fill all nodes with null to know the end*/
 	for (i = 0; i < size; i++)
 	{
 		ht->array[i] = NULL;
 	}
 
-	/* return the new table */
 	return (ht);
 }
