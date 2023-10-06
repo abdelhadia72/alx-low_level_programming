@@ -23,6 +23,8 @@ hash_node_t *create_new_node(const char *key, const char *value)
 		free(new_node->key);
 		free(new_node->value);
 		free(new_node);
+		/* adding null 145 */
+		new_node = NULL;
 		return (NULL);
 	}
 
