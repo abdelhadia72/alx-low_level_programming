@@ -57,12 +57,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		current_node = ht->array[current_idx];
-		while (current_node->next)
-		{
-			current_node = current_node->next;
-		}
-		current_node->next = new_node;
+		new_node->next = ht->array[current_idx];
 	}
 
 	return (1);
