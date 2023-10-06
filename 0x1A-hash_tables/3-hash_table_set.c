@@ -57,7 +57,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		new_node->next = ht->array[current_idx];
+		if (strcmp(key, ht->array[current_idx]->key) == 0)
+		{
+			strcpy(ht->array[current_idx]->value, value);
+			return (1);
+		}
+		else
+		{
+			new_node->next = ht->array[current_idx];
+			ht->array[current_idx] = new_node;
+		}
 	}
 
 	return (1);
