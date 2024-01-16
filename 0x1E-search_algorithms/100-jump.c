@@ -8,16 +8,15 @@
  * @array: Pointer to the first element of the array
  * @size: Number of elements in the array
  * @value: Value to search for
- *
  * Return: Index where value is found, or -1 if not found
  */
 int jump_search(int *array, size_t size, int value)
 {
-	if (!array)
-		return (-1);
-
 	int step = sqrt(size);
 	int prev = 0;
+
+	if (!array)
+		return (-1);
 
 	while (array[(int)fmin(step, size) - 1] < value)
 	{
