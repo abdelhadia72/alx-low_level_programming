@@ -1,48 +1,49 @@
-#include <math.h>
 #include "search_algos.h"
 
 /**
- * jump_list - Searches for a value in a sorted list of integers using Jump search
+ * jump_list - searching in linked list using Jump search algorithm
+ * @list: pointer to the head of the list to search in
+ * @size: number of nodes in the list
+ * @value: value to search for
  *
- * @list: Pointer to the head of the list to search in
- * @size: Number of nodes in list
- * @value: Value to search for
- *
- * Return: A pointer to the first node where value is located,
- *         or NULL if the value is not present or if the list is NULL
+ * Return: pointer to the first node where value is located, or NULL on failure
  */
+
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-    size_t jump, prev, i;
+	size_t step, step_size;
+	listint_t *node, *jump;
 
-    if (!list)
-        return (NULL);
+	if (list == NULL || size == 0)
+		return (NULL);
 
-    jump = sqrt(size);
-    prev = 0;
+	step = 0;
+	step_size = sqrt(size);
 
-    while (list && list->n < value)
-    {
-        printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
-        prev = list->index;
-        for (i = 0; list && i < jump; ++i)
-            list = list->next;
-    }
+	for (node = jump = list; jump != NULL &&
+	jump->index + 1 < size && jump->n < value;)
+	{
+		node = jump;
+		for (step += step_size; jump != NULL
+		&& jump->index < step; jump = jump->next)
+		{
+			if (jump->index + 1 == size)
+				break;
+		}
+		if (jump != NULL)
+			printf("Value checked at index [%ld] = [%d]\n", jump->index, jump->n);
+	}
 
-    printf("Value found between indexes [%lu] and [%lu]\n", prev, prev + jump);
+	if (node != NULL && jump != NULL)
+		printf("Value found between indexes [%ld] and [%ld]\n",
+		node->index, jump->index);
 
-    while (list && list->n < value)
-    {
-        printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
-        prev = list->index;
-        list = list->next;
-    }
+	for (; node != NULL && node->index <= jump->index &&
+	node->n < value; node = node->next)
+	{
+		if (node != NULL)
+			printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
+	}
 
-    if (list && list->n == value)
-    {
-        printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
-        return (list);
-    }
-
-    return (NULL);
+	return (node != NULL && node->n == value ? node : NULL);
 }
