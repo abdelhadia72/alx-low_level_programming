@@ -1,7 +1,10 @@
 #include "search_algos.h"
 #include <math.h>
-#include <stdio.h>
 
+int min(int a, int b)
+{
+	return a < b ? a : b;
+}
 /**
  * jump_search - Searches for a value in a sorted
  * array using jump search algorithm
@@ -12,13 +15,13 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	int step = sqrt(size);
 	int prev = 0;
+	size_t step = sqrt(size);
 
 	if (!array)
 		return (-1);
 
-	while (array[(int)fmin(step, size) - 1] < value)
+	while (array[min(step, size) - 1] < value)
 	{
 		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 		prev = step;
@@ -27,22 +30,18 @@ int jump_search(int *array, size_t size, int value)
 			return (-1);
 	}
 
-	printf("Value found between indexes [%d] and [%d]\n", prev, step);
+	printf("Value found between indexes [%d] and [%d]\n", prev, min(step, size));
 
 	while (array[prev] < value)
 	{
-		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
+		printf("Value checked array[%ld] = [%d]\n", step, array[step]);
 		prev++;
-
-		if (prev == (int)fmin(step, size))
+		if (prev == min(step, size))
 			return (-1);
 	}
 
 	if (array[prev] == value)
-	{
-		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 		return (prev);
-	}
 
 	return (-1);
 }
